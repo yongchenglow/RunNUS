@@ -1,6 +1,12 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  setTimeout(function () {
+    $('.register-button').removeClass("animated");
+    $('.register-button').removeClass("pulse");
+  }, 7000);
+
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
