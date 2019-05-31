@@ -4,7 +4,7 @@
   setTimeout(function () {
     $('.register-button').removeClass("animated");
     $('.register-button').removeClass("pulse");
-  }, 7000);
+  }, 12000);
 
 
   // Smooth scrolling using jQuery easing
