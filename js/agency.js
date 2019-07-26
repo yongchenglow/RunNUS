@@ -6,6 +6,18 @@
     $('.register-button').removeClass("pulse");
   }, 12000);
 
+  setInterval(function(){
+    $("#register").addClass("animated");
+    $("#register").addClass("pulse");
+    $("#register").addClass("btn-lg");
+    setTimeout(function(){
+      $("#register").removeClass("animated");
+      $("#register").removeClass("pulse");
+      $("#register").removeClass("btn-lg");
+    },3000);
+  },30000);
+
+
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -44,5 +56,29 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+
+  $('.zoom-tile')
+   // tile mouse actions
+   .on('mouseover', function(){
+     $(this).children('.zoom-photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+   })
+   .on('mouseout', function(){
+     $(this).children('.zoom-photo').css({'transform': 'scale(1)'});
+   })
+   .on('mousemove', function(e){
+     $(this).children('.zoom-photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+   })
+   // tiles set up
+   .each(function(){
+     $(this)
+       // add a photo container
+       .append('<div class="zoom-photo"></div>')
+       // set up a background image for each tile based on data-image attribute
+       .children('.zoom-photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+
+       $(this).css({'height':  $("#reference").height() + 'px'})
+   })
+
+   $("#reference").hide();
 
 })(jQuery); // End of use strict

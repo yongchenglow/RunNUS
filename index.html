@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
 
@@ -21,12 +21,18 @@
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
   <link href="css/agency_V1.css" rel="stylesheet">
 
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+  <!-- AddEvent theme css -->
+	<link rel="stylesheet" href="css/theme3.css" type="text/css" media="screen" />
+  <!-- AddEvent script -->
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
 </head>
 
@@ -75,14 +81,14 @@
           <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
           </li> -->
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#partners">Partners</a>
+          </li>
           <li class="nav-item" style="margin:auto;">
-            <a class="btn btn-primary btn-l text-uppercase js-scroll-trigger" href="#registration">Register</a>
+            <a id="register" class="btn btn-primary btn-l text-uppercase js-scroll-trigger infinite" href="#registration">Register</a>
           </li>
         </ul>
       </div>
@@ -130,8 +136,20 @@
         <div class="col-md-5">
           <img src="img/about/RunNUS_inclusiveness.jpg" style="width:100%;" alt="Biggest NUS run which includes everyone"></img>
         </div>
-        <div class="col-md-5">
-          Since its inception in 2007, RunNUS has become one of the biggest and most anticipated NUS run for students, staff and alumni. Above running and fun, RunNUS works with NUS Disability Support Office (DSO) and inviting Social Service Organizations (SSOs) this year. With the tagline 'Run For A Cause', we aim to empower the community of People With Disabilities/Special Needs (PWDSNs) through inclusiveness.
+        <div class="col-md-5" align="justify">
+          <p>Since its inception in 2007, RunNUS has become one of the biggest and most anticipated NUS run for students, staff and alumni. Above running and fun, RunNUS works with NUS Disability Support Office (DSO) and Disabled People's Association (DPA) this year. With the tagline 'Run For A Cause', we aim to empower the community of People With Disabilities/Special Needs (PWDSNs) through inclusiveness.</p>
+          <div title="Add to Calendar" class="addeventatc" data-styling="none">
+              Add to Calendar
+            <span class="addeventatc_icon"></span>
+            <span class="start">09/08/2019 06:30 AM</span>
+            <span class="end">09/08/2019 11:30 AM</span>
+            <span class="timezone">Singapore</span>
+            <span class="title">RunNUS (Run For a Cause)</span>
+            <span class="description">Support people with disabilities by joining RunNUS 2019. Join our educational booths in the Carnival to learn more!</span>
+            <span class="location">University Town, NUS, 2 College Ave West, Stephen Riady Centre, Singapore 138607</span>
+            <span class="organizer">NUS Students' Sports Club</span>
+            <span class="organizer_email">admin@runnus.nussportsclub.org</span>
+          </div>
         </div>
         <div class="col-md-1"></div>
       </div>
@@ -157,7 +175,7 @@
               </tr>
               <tr>
                 <th style="background-color:#fed136;" scope="row">Event Location</th>
-                <td>Town Green, University Town @ NUS</td>
+                <td><a id="locationText" onmouseover="mapThis.show(this);" style="text-decoration:none; border-bottom:1px dotted #999; color: black;" href="https://goo.gl/maps/PLQpm33tJeopcBsX8" target="_blank">Town Green, University Town @ NUS</a></td>
               </tr>
               <tr>
                 <th style="background-color:#fed136;" scope="row">Race Categories</th>
@@ -168,14 +186,18 @@
         </div>
         <div class="col-lg-2 col-md-1 col-sm-0"></div>
       </div>
-      <div class="row text-center">
+      <div class="row text-center" style="margin-top:20px;">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fa-stack-1x fa-inverse" style="font-size:40px;">15 km</i>
           </span>
           <h4 class="service-heading">Insane</h4>
-          <p class="text-muted">A NUS run route only for those who are brave or are truely believers in the support of persons with Disabilities/ Special Needs. We salute you for your participation.</p>
+          <p class="text-muted" align="justify">A NUS run route only for those who are brave or are truely believers in the support of persons with Disabilities/ Special Needs. We salute you for your participation.</p>
+          <div class="zoom-tiles">
+            <div class="zoom-tile zoom" data-scale="2" data-image="img/routes/15km_Route.png"></div>
+            <img id="reference" class="img-fluid" src="img/routes/15km_Route.png" alt="RunNUS 15km Running Route" style="visibility:hidden;">
+          </div>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -183,7 +205,10 @@
             <i class="fa-stack-1x fa-inverse" style="font-size:40px;">10 km</i>
           </span>
           <h4 class="service-heading">Ambitious</h4>
-          <p class="text-muted">Challenge yourself by navigating through the hilly terrains of NUS. This is the perfect distance for all beginner to intermediate runners and supporters.</p>
+          <p class="text-muted" align="justify">Challenge yourself by navigating through the hilly terrains of NUS. This is the perfect distance for all beginner to intermediate runners and supporters.</p>
+          <div class="zoom-tiles">
+            <div class="zoom-tile zoom" data-scale="2" data-image="img/routes/10km_Route.png"></div>
+          </div>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -191,10 +216,12 @@
             <i class="fa-stack-1x fa-inverse" style="font-size:40px;">3 km</i>
           </span>
           <h4 class="service-heading">Keen</h4>
-          <p class="text-muted">Buddy up with a person with Disabilities/ Special Needs where you will be motivating and assisting them or challenge yourself by experiencing Disability Simulations.</p>
+          <p class="text-muted" align="justify">Buddy up with a person with Disabilities/ Special Needs where you will be motivating and assisting them or challenge yourself by experiencing Disability Simulations.</p>
+          <div class="zoom-tiles">
+            <div class="zoom-tile zoom" data-scale="2" data-image="img/routes/3km_Route.png"></div>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -313,95 +340,74 @@
   </section> -->
 
   <!-- Team -->
-  <!-- <section class="bg-light page-section" id="team">
+  <section class="bg-light page-section" id="team">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">RunNUS 2019 Amazing Team</h2>
+          <h3 class="section-subheading text-muted">A student lead initiative that will create ripples to change and educate the world</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
+            <img class="mx-auto rounded-circle" src="img/team/Qing_Xi.jpeg" alt="">
+            <h4>Advisor</h4>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
+            <img class="mx-auto rounded-circle" src="img/team/PD_Cell.jpeg" alt="">
+            <h4>Project Directors</h4>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
+            <img class="mx-auto rounded-circle" src="img/team/Jasmine_Seah.jpeg" alt="">
+            <h4>Advisor</h4>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/Route_Management.jpg" alt="">
+            <h4>Route</h4>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/Admin_Cell.jpg" alt="">
+            <h4>Admin</h4>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/Programmes_Cell.jpeg" alt="">
+            <h4>Programmes</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/Publicity_Cell.jpeg" alt="">
+            <h4>Publicity</h4>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/Marketing_Cell.jpeg" alt="">
+            <h4>Marketing</h4>
+          </div>
+        </div>
+        <div class="col-sm-2">
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- Clients -->
   <!-- <section class="py-5">
@@ -432,15 +438,43 @@
   </section> -->
 
   <!-- Clients -->
-  <section class="py-5">
+  <section class="bg-light page-section" id="partners">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">RunNUS Organizers and Partners</h2>
+        <h3 class="section-subheading text-muted">We are not the only ones who believe in disability support and we are thankful to receive their support</h3>
+      </div>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
-          <h4 class="service-heading text-center">RunNUS is a Project of</h4>
+          <h4 class="service-heading text-center">A Project of</h4>
           <a href="https://www.nussportsclub.org" target="_blank"><img style="width:100%;" src="img/logos/Sports_Club_Logo.png" alt="NUS Students' Sports Club"></img></a>
         </div>
         <div class="col-lg-4"></div>
+      </div>
+      <div class="row" style="margin-top:20px;">
+        <div class="col-12">
+          <h4 class="service-heading text-center" style="margin-bottom:0px;">Supported By</h4>
+        </div>
+      </div>
+      <div class="row" style="margin-top:30px;" align="center">
+        <div class="col-lg-3 parent-vertical-align">
+          <a href="https://orgsync.com/140428/chapter" target="_blank"><img style="max-height:75px;max-width:100%;" src="img/logos/OSA.jpg" alt="NUS Office of Student Affairs"></img></a>
+        </div>
+        <div class="col-lg-2 parent-vertical-align">
+          <a href="www.hpb.gov.sg/" target="_blank"><img style="max-height:75px;max-width:100%;" src="img/logos/Health_Promotion_Board.jpg" alt="Health Promotion Board"></img></a>
+        </div>
+        <div class="col-lg-1 parent-vertical-align" style="padding:0px;">
+          <a href="https://www.ns.sg/web/portal/nsmen/home/promotions/listing/entertainment/exclusive-special-rates-on-all-race-categories" target="_blank"><img style="max-height:100px;max-width:100%;" src="img/logos/Support_NS.jpg" alt="Support NS"></img></a>
+        </div>
+        <div class="col-lg-3 parent-vertical-align">
+          <a href="https://www.myactivesg.com/" target="_blank"><img style="max-height:75px;max-width:100%;" src="img/logos/ActiveSG.png" alt="ActiveSG"></img></a>
+        </div>
+        <div class="col-lg-3 parent-vertical-align">
+          <a href="http://www.nus.edu.sg/alumnet/events/results/runnus-2019" target="_blank"><img style="max-height:75px;max-width:100%;" src="img/logos/OAR.png" alt="Office of Alumni Relations"></img></a>
+        </div>
       </div>
     </div>
   </section>
@@ -552,6 +586,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.js"></script>
+  <script src="js/googleMapHover.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140884872-1"></script>
