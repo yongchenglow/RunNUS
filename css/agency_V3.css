@@ -108,19 +108,23 @@ h6 {
   font-weight: 800;
 }
 
+.zsiq_floatmain{
+  margin-right:25%;
+}
+
 .gevme-registration-block {
-  height: 700px;
+  height: 780px !important;
 }
 
 @media (min-width: 768px) {
   .gevme-registration-block {
-    height: 750px;
+    height: 790px !important;
   }
 }
 
 @media (min-width: 992px) {
   .gevme-registration-block {
-    height: 700px;
+    height: 790px !important;
   }
 }
 
