@@ -112,22 +112,6 @@ h6 {
   margin-right:25%;
 }
 
-.gevme-registration-block {
-  height: 780px !important;
-}
-
-@media (min-width: 768px) {
-  .gevme-registration-block {
-    height: 790px !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .gevme-registration-block {
-    height: 790px !important;
-  }
-}
-
 @media (min-width: 768px) {
   section {
     padding: 150px 0;

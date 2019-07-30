@@ -1,3 +1,10 @@
+/***
+ * Description: NUS Students' Sports Club Fix to Gevme's widget code
+ * Problem: Gevme Helping Chatbot Blocks Registration Button
+ * Solution: Increase the height of iframe by 85px based on device as chat bot only appears on Web and not mobile
+ * Creator: Gevme
+ * Modifier: Low Yong Cheng
+ */
 (function() {
 	var DIV_CLS = 'gevme-registration-block',
 		APP_BASE = 'https://www.gevme.com/',
@@ -52,7 +59,18 @@
 
 			var iframe = document.getElementById(sp[0]);
 			if (iframe) {
-				iframe.parentNode.style.height = sp[1]+'px';
+
+        // Modification Starts Here
+        var heightOfWidget = parseInt(sp[1]);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          // Do nothing because the widget will not be displayed
+        } else {
+          // Done to make space of the widget Widget Height is 60px
+          heightOfWidget += 85;
+        }
+        // End of Modification
+
+				iframe.parentNode.style.height = heightOfWidget+'px';
 			}
 		}
 	}
