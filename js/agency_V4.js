@@ -14,10 +14,8 @@
       $("#register").removeClass("animated");
       $("#register").removeClass("pulse");
       $("#register").removeClass("btn-lg");
-    },3000);
+    },3000)
   },30000);
-
-
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -76,9 +74,44 @@
        // set up a background image for each tile based on data-image attribute
        .children('.zoom-photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
 
-       $(this).css({'height':  $("#reference").height() + 'px'})
-   })
+       $(this).css({'height':  $("#reference").height() + 'px'});
+   });
 
    $("#reference").hide();
 
+  var today = new Date();
+  var signUpDate = new Date("2020-06-28T23:45:00");
+
+  if(today.getTime() > signUpDate.getTime()){
+    var x = document.getElementsByName("register");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].setAttribute("disabled","false");
+      $(x[i]).attr("target","_blank");
+      $(x[i]).attr("href","http://www.bit.ly/runnus2020");
+    }
+  } else {
+    var x = document.getElementsByName("register");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      console.log("hello");
+      x[i].addEventListener("click", function(){
+        $.confirm({
+          icon: 'fas fa-exclamation-triangle',
+          title: 'Oh no!',
+          closeIcon: true,
+          content: '<div class="text-center">Sign ups will only be opened on 29th June, please visit us again</div>',
+          type: 'orange',
+          typeAnimated: true,
+          backgroundDismiss: true,
+          buttons: {
+              close: function () {
+              }
+          }
+        });
+      });
+    }
+  }
+
 })(jQuery); // End of use strict
+
