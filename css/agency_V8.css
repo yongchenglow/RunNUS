@@ -514,7 +514,7 @@ header.masthead .intro-text .intro-heading {
 .timeline > li {
   position: relative;
   min-height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .timeline > li:after, .timeline > li:before {
@@ -612,7 +612,7 @@ header.masthead .intro-text .intro-heading {
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .timeline > li .timeline-panel {
     float: left;
@@ -640,7 +640,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 992px) {
   .timeline > li {
-    min-height: 150px;
+    min-height: 100px;
   }
   .timeline > li .timeline-panel {
     padding: 0 20px 20px;
@@ -809,4 +809,56 @@ ul.social-buttons li a {
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
+}
+
+.toast-top-right {
+  top: 92px;
+  right: 12px;
+}
+
+.img-width-fluid {
+  max-height: 100%;
+  width: auto;
+}
+
+.timeline-icon {
+  padding: 15px;
+}
+
+.timeline-icon-vertical {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  .timeline-icon {
+    padding: 18px;
+  }
+  
+  .timeline-icon-vertical {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .timeline-icon {
+    padding: 22px;
+  }
+  
+  .timeline-icon-vertical {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline-icon {
+    padding: 25px;
+  }
+  
+  .timeline-icon-vertical {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }

@@ -23,11 +23,11 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   <link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
 
-  <!-- Custom styles for this template -->
-  <link href="css/agency_V6.css" rel="stylesheet">
-
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+  <!-- Toastr.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
   <!-- Jquery Confirm -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
@@ -38,11 +38,16 @@
   <!-- AddEvent script -->
   <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
+  <!-- Custom styles for this template -->
+  <link href="css/agency_V8.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=9863491550&autoLogAppEvents=1" nonce="7Mj8bElq"></script>
+
   <script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -69,7 +74,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logos/RunNUS_2019_LOGO_thin.png" alt="RunNUS - The Biggest NUS Run"></img></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="height:50px;"src="img/logos/RUNNUS_Logo.png" alt="RunNUS - The Biggest NUS Run"></img></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -80,7 +85,10 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#raceDetails">Race Details</a>
+            <a class="nav-link js-scroll-trigger" href="#raceDetails">Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#promotions">Promos</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -88,11 +96,17 @@
           <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
           </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#tips">Tips</a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#partners">Partners</a>
           </li>
+          <li class="nav-item" style="margin:auto;margin-right:10px;">
+            <a class="btn btn-info btn" name="submitResults" disabled="true" style="text-transform: initial;" href="http://www.bit.ly/runnussubmission">Submit</a>
+          </li>
           <li class="nav-item" style="margin:auto;">
-            <a id="register" name="register" class="btn btn-primary btn-l text-uppercase js-scroll-trigger infinite" disabled="true" href="#">Sign Up</a>
+            <a id="register" name="register" class="btn btn-primary btn-l text-uppercase js-scroll-trigger infinite" disabled="true" href="http://www.bit.ly/runnus2020">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -109,15 +123,16 @@
             <div class="row">
               <div class="col-lg-2"></div>
               <div class="col-lg-8 animated bounceIn delay-2s">
-                <img src="img/logos/RunNUS_Logo_Generic.png" alt="RunNUS Biggest Run in NUS" style="width:100%;margin-top:10px;"></img>
+                <img src="img/logos/RUNNUS_Logo.png" alt="RunNUS Biggest Run in NUS" style="width:100%;margin-top:10px;"></img>
               </div>
               <div class="col-lg-2"></div>
             </div>
-            <div class="intro-lead-in animated flipInX delay-3s" style="font-size:22px;margin-bottom:5px;">19 to 27 Sep 2020</div>
+            <div class="intro-lead-in animated flipInX delay-3s" style="font-size:22px;margin-bottom:5px;">13 July to 27 Sep 2020</div>
           </div>
           <div class="col-lg-2 col-sm-0"></div>
         </div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger register-button animated pulse" name="register" disabled="true" href="#">Sign Up Now!</a>
+        <a class="btn btn-info btn-xl text-uppercase register-button" name="submitResults" disabled="true" href="http://www.bit.ly/runnussubmission" style="margin-right:5px;" >Submit Results</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger register-button animated pulse" name="register" disabled="true" href="http://www.bit.ly/runnus2020">Sign Up Now!</a>
       </div>
     </div>
   </header>
@@ -143,8 +158,8 @@
           <div title="Add to Calendar" class="addeventatc" data-styling="none">
               Add to Calendar
             <span class="addeventatc_icon"></span>
-            <span class="start">09/19/2019 00:00 AM</span>
-            <span class="end">09/27/2019 11:59 PM</span>
+            <span class="start">07/13/2020</span>
+            <span class="end">09/27/2020</span>
             <span class="timezone">Singapore</span>
             <span class="title">RunNUS 2020 (Run For a Cause)</span>
             <span class="description">Raise Awareness and help people with disability or special needs by joining RunNUS 2020</span>
@@ -173,7 +188,7 @@
               </tr>
               <tr>
                 <th style="background-color:#fed136;" scope="row">Event Date</th>
-                <td colspan="3">19 to 27 September 2020</td>
+                <td colspan="3">13 July to 27 September 2020</td>
               </tr>
               <tr>
                 <th style="background-color:#fed136;" scope="row">Race Distance</th>
@@ -187,21 +202,87 @@
         <div class="col-lg-2 col-md-1 col-sm-0"></div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8 col-sm-10 text-center mt-5">
-          <h3 class="section-heading">What is a Virtual Race</h3>
-          <img class="img-fluid mt-3" src="img/raceInfo/VirtualRace.png" alt="Virtual Race">
+        <div class="col-lg-6 col-md-8 col-sm-10 text-center mt-5 mb-4">
+          <h3 class="section-heading">How to join RunNUS?</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="img-fluid timeline-icon" src="img/icon/google-forms.png" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h5>29 Jun to 27 Sep</h5>
+                  <h4 class="subheading">Sign up</h4>
+                </div>
+                <div class="timeline-body">
+                  <a href="http://www.bit.ly/runnus2020" target="_blank">
+                    <p class="text-muted">Submit this form and make payment</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="img-width-fluid timeline-icon-vertical" src="img/icon/Runner.svg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h5>13 Jul to 27 Sep</h5>
+                  <h4 class="subheading">Run Anywhere and Track</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Use our Official Running App MapMyRun by Underarmour to stand a chance to win their shoes</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="img-fluid timeline-icon" src="img/icon/WebUpload.svg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h5>13 Jul to 27 Sep</h5>
+                  <h4 class="subheading">Upload your image as proof</h4>
+                </div>
+                <div class="timeline-body">
+                  <a href="http://www.bit.ly/runnussubmission" target="_blank">
+                    <p class="text-muted">Upload your run here!</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="img-width-fluid timeline-icon-vertical" src="img/icon/Medal.svg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h5>20 Sep to 20 October</h5>
+                  <h4 class="subheading">Get Entitlements Delivered to you!</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">We are still settling the negoations with our sponsors, more people who join the race by end July, the better the products! Do share the race with your friends!</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10 text-center">
+                  <img class="img-fluid mt-3" src="img/raceInfo/Entitlements.png" alt="Entitlements">
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-sm-10 text-center mt-5">
           <h3 class="section-heading">Race Fees</h3>
-          <img class="img-fluid mt-3" src="img/raceInfo/RaceFees.png" alt="Race Fees">
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8 col-sm-10 text-center mt-5">
-          <h3 class="section-heading">Entitlements</h3>
-          <img class="img-fluid mt-3" src="img/raceInfo/Entitlements.png" alt="Entitlements">
+          <img class="img-fluid mt-3" src="img/raceInfo/RaceFeesNew.png" alt="Race Fees">
         </div>
       </div>
       <div class="row justify-content-center">
@@ -210,202 +291,45 @@
           <img class="img-fluid mt-3" src="img/raceInfo/ShirtSale.png" alt="Shirt Sale">
         </div>
       </div>
-      <!-- <div class="row text-center" style="margin-top:20px;">
-        <div class="col-md-4" style="margin-bottom:25px;">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa-stack-1x fa-inverse" style="font-size:40px;"></i>
-          </span>
-          <h4 class="service-heading">Insane</h4>
-          <p class="text-muted" align="justify"> A demanding route for those who are brave and hardcore supporters of our cause. We salute you for your participation.<br><br></p>
-          <div class="row" style="margin-top:10px; margin-bottom:10px;">
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/medal.png" alt="Finisher Medal">
-            </div>
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/carnival.jpg" alt="Carnival">
-            </div>
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/run-singlet.png" alt="Running Singlet">
-            </div>
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/finisher-shirt.png" alt="Finisher Shirt">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" style="margin-bottom:25px;">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa-stack-1x fa-inverse" style="font-size:40px;">5 km</i>
-          </span>
-          <h4 class="service-heading">Ambitious</h4>
-          <p class="text-muted" align="justify">Push yourself by navigating the hilly terrains of NUS. This is the perfect distance for all beginner to intermediate runners and supporters.</p>
-          <div class="row justify-content-center" style="margin-top:10px; margin-bottom:10px;">
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/medal.png" alt="Finisher Medal">
-            </div>
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/carnival.jpg" alt="Carnival">
-            </div>
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/run-singlet.png" alt="Running Singlet">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" style="margin-bottom:25px;">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa-stack-1x fa-inverse" style="font-size:40px;">3 km</i>
-          </span>
-          <h4 class="service-heading">Eager</h4>
-          <p class="text-muted" align="justify">Buddy up & complete the challenge together with a person with disabilities/special needs. You can also try out our Challenge Simulations to complete the route.</p>
-          <div class="row justify-content-center" style="margin-top:10px; margin-bottom:10px;">
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/medal.png" alt="Finisher Medal">
-            </div>
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/carnival.jpg" alt="Carnival">
-            </div>
-            <div class="col-3" style="padding-left:5px;padding-right:5px;">
-              <img class="entitlements img-fluid rounded-circle" src="img/entitlements/run-singlet.png" alt="Running Singlet">
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- <img class="img-fluid" style="display:block;margin-top:20px;max-width:800px;margin-left:auto;margin-right:auto;" src="img/entitlements/entitlements.jpg" alt="entitlements">
-      <a href="doc/RunNUS_2019_Race_Booklet.pdf" target="_blank">
-        <div class="race-booklet-container">
-          <img class="race-booklet" src="img/RunNUS_Race_Booklet_2019.png" alt="RunNUS Race Booklet 2019">
-          <div class="race-booklet-middle">
-            <div class="race-booklet-hover-text">Click to download</div>
-          </div>
-        </div>
-      </a> -->
     </div>
   </section>
 
-  <!-- Results -->
-  <!-- <section class="page-section" id="registration">
+  <!-- About -->
+  <section class="page-section" id="promotions">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Results</h2>
-          <h3 class="section-subheading text-muted">It is not how you do, but what you do that makes a difference</h3>
+        <div class="col-md-1"></div>
+        <div class="col-md-10 text-center">
+          <h2 class="section-heading">Promotions</h2>
+          <h3 class="section-subheading text-muted">For a Limited Slots and Time Only</h3>
         </div>
+        <div class="col-md-1"></div>
       </div>
-      <div class="row text-center justify-content-center">
-        <div class="col-lg-4 col-md-6">
-          <a href="https://www.sportstats.asia/display-results.xhtml?raceid=105747" target="_blank">
-            <h3>15km Results</h3>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <a href="https://www.sportstats.asia/display-results.xhtml?raceid=105748" target="_blank">
-            <h3>10km Results</h3>
-          </a>
-        </div>
-        <div></div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Portfolio Grid -->
-  <!-- <section class="bg-light page-section" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Portfolio</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+      <div class="card-deck row justify-content-center">
+        <div class="card col-md-4">
+          <div class="card-body">
+            <h5 class="card-title text-center">Bundle of 4</h5>
+            <h6 class="card-subtitle mb-1 text-muted mt-3">End Date: 27th Sep 2020</h6>
+            <p class="card-text">Sign Up as a group to get a total of $4 off race fees</p>
+            <div class="text-center">
+              <a class="btn btn-primary text-uppercase" name="register" disabled="true" href="#">Sign Up Now!</a>
             </div>
-            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Threads</h4>
-            <p class="text-muted">Illustration</p>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+        <div class="card col-md-4">
+          <div class="card-body">
+            <h5 class="card-title text-center">NUS Alumni</h5>
+            <h6 class="card-subtitle mb-1 text-muted mt-3">End Date: 27th Sep 2020</h6>
+            <p class="card-text">Enter Promo Code: alumNUS for NUS Alumni's only</p>
+            <p class="text-danger" style="font-size: 0.75rem;">Any non-Alumni found to be using the code will have their sign up invalidated with <strong>no refunds.</strong></p>
+            <div class="text-center">
+              <a class="btn btn-primary text-uppercase" name="register" disabled="true" href="#">Sign Up Now!</a>
             </div>
-            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Explore</h4>
-            <p class="text-muted">Graphic Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Finish</h4>
-            <p class="text-muted">Identity</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Lines</h4>
-            <p class="text-muted">Branding</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Southwest</h4>
-            <p class="text-muted">Website Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Window</h4>
-            <p class="text-muted">Photography</p>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- Team -->
   <!-- <section class="page-section" id="team">
@@ -472,34 +396,6 @@
   </section> -->
 
   <!-- Clients -->
-  <!-- <section class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Clients -->
   <section class="page-section" id="partners">
     <div class="container-fluid">
       <div class="row mb-3">
@@ -518,17 +414,44 @@
       </div>
       <div class="row mt-3">
         <div class="col-lg-4"></div>
-        <div class="col-lg-4" align="center">
+        <div class="col-lg-4">
           <h4 class="service-heading text-center">A Project of</h4>
           <div class="row justify-content-center">
-            <div class="col-md-6 col-sm-8 col-xs-10">
-              <a href="https://www.nussportsclub.org" target="_blank"><img class='img-fluid' src="img/logos/Sports_Club_Logo.png" alt="NUS Students' Sports Club"></img></a>
-            </div>
+            <a href="https://www.nussportsclub.org" target="_blank"><img class='img-fluid' src="img/logos/Sports_Club_Logo.png" alt="NUS Students' Sports Club"></img></a>
           </div>
         </div>
         <div class="col-lg-4"></div>
       </div>
       <div class="row">
+        <div class="col-md-12">
+          <h4 class="service-heading text-center" style="margin-top: 30px;">Our Beneficiaries</h4>
+          <div class="row justify-content-center" style="margin:0px;">
+            <div class="col-sm-2" align="center">
+              <a href="https://www.dpa.org.sg/" target="_blank">
+                <img style="max-height:100px;max-width:100%;" src="img/logos/dpa.jpeg" alt="Disabled People's Association"></img>
+              </a>
+            </div>
+            <div class="col-sm-3" align="center">
+              <a href="https://sdsc.org.sg/about-us/" target="_blank">
+                <img style="max-height:100px;max-width:100%;margin-top:10px;" src="img/logos/sdsc.png" alt="Singapore Disability Sports Council"></img>
+              </a>
+            </div>
+          </div>
+          <div class="row mt-3 justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+              <div class="fb-video" data-href="https://www.facebook.com/RunNUS/videos/275732083534358/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/RunNUS/videos/275732083534358/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/RunNUS/videos/275732083534358/"></a><p>Why Sign Up 2: For our second post of our Why Sign Up (WSU) series, we will be introducing one of our beneficiaries - the Singapore Disability Sports Council (SDSC)!! 🥳✨
+
+              The Singapore Disability Sports Council (SDSC) is the national sports body for the disabled in Singapore. It is a social service organisation registered with the Commissioner of Charities. Founded in 1973, the organisation&#039;s vision is to transform the lives of persons with disabilities through sport. SDSC is committed to building a vibrant and inclusive community where persons with disabilities (PWDs) can pursue their sporting aspirations. Their recent video campaign, #DefyLimits, celebrates the achievements of three para athletes and their community of support around them. #DefyLimits talks about giving PWDs equal opportunities as others to chase after their dreams; to be embraced by all Singaporeans as a part of our community, despite our unique differences.✨ Watch this video to find out more about SDSC&#039;s Defy Limits campaign!
+              
+              What can you do to help? Well, ALL of RunNUS’ net proceeds will be channeled to our beneficiaries! Furthermore, every $2 from merchandise purchased will be donated to them, regardless of whether there’s a profit or deficit in our event.
+              
+              What are you waiting for? Early bird promo ends in 4 days!! Sign up now! Every little help you give goes a long way✨</p>Posted by <a href="https://www.facebook.com/RunNUS/">RunNUS</a> on Tuesday, July 7, 2020</blockquote></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
         <div class="col-md-12">
           <h4 class="service-heading text-center" style="margin-top: 30px;">In Support of</h4>
           <div class="row justify-content-center" style="margin:0px;">
@@ -673,9 +596,9 @@
         <div class="col-md-4">
           <img style="max-height:57px;max-width:100%;" src="img/logos/sponsors/YCS_NYC_SGYouthCares.png" alt="SG Youth Cares"></img>
         </div>
-      </div>
+      </div> -->
     </div>
-  </section>
+  </section> 
 
   <!-- Contact -->
   <!-- <section class="page-section" id="contact">
@@ -726,34 +649,39 @@
   <footer class="footer">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; RunNUS 2019</span>
+        <div class="col-md-3 text-center">
+          <span class="copyright">Copyright &copy; RunNUS 2020</span>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6 text-center">
           <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
+            <li class="list-inline-item text-center">
               <a href="https://www.facebook.com/RunNUS" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item text-center">
               <a href="https://www.instagram.com/runnus/?igshid=19u03xco1nvro" target="_blank">
                 <i class="fab fa-instagram fa-lg"></i>
               </a>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item text-center">
               <a href="mailto:admin@runnus.nussportsclub.org?subject=Website Enquiry" target="_blank">
                 <i class="fas fa-envelope"></i>
               </a>
             </li>
+            <li class="list-inline-item text-center">
+              <a href="https://t.me/runnus2020" target="_blank">
+                <i class="fab fa-telegram-plane fa-lg" style="margin-left:-2px;"></i>
+              </a>
+            </li>
           </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <ul class="list-inline quicklinks">
             <li class="list-inline-item">
-              <a href="doc/RunNUS_Rules_and_Regulations_2019.pdf" target="_blank">Rules</a>
+              <a href="doc/RunNUS_Rules_and_Regulations_2020.pdf" target="_blank">Rules & Regulations</a>
             </li>
-            <li class="list-inline-item">
+            <!-- <li class="list-inline-item">
               <a href="doc/RunNUS_Terms_and_Conditions_2019.pdf" target="_blank">Terms</a>
             </li>
             <li class="list-inline-item">
@@ -764,7 +692,7 @@
             </li>
             <li class="list-inline-item">
               <a href="doc/RunNUS_Race_Pack_Authorisation_Form_2019.pdf" target="_blank">Authorization</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -788,8 +716,11 @@
   <!-- Font Awesome -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/fontawesome.min.js"></script>
   
+  <!-- Toastr -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  
   <!-- Custom scripts for this template -->
-  <script src="js/agency_V4.js"></script>
+  <script src="js/agency_V8.js"></script>
   <script src="js/googleMapHover.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
