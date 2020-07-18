@@ -45,14 +45,11 @@
 <body id="page-top">
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=9863491550&autoLogAppEvents=1" nonce="7Mj8bElq"></script>
-
   <script>
     window.fbAsyncInit = function() {
       FB.init({
         xfbml            : true,
-        version          : 'v3.3'
+        version          : 'v7.0'
       });
     };
 
@@ -64,12 +61,16 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  <!-- Your customer chat code -->
+  <!-- Your Chat Plugin code -->
   <div class="fb-customerchat"
     attribution=setup_tool
     page_id="165059410217331"
-    theme_color="#0084ff">
+logged_in_greeting="Hi! Check out the Tips sections for sign up issues or how to set up MapMyRun!"
+logged_out_greeting="Hi! Check out the Tips sections for sign up issues or how to set up MapMyRun!">
   </div>
+
+  <!-- Load Facebook Videos -->
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=9863491550&autoLogAppEvents=1" nonce="7Mj8bElq"></script>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -96,17 +97,17 @@
           <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
           </li> -->
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#tips">Tips</a>
-          </li> -->
+          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#partners">Partners</a>
           </li>
-          <li class="nav-item" style="margin:auto;margin-right:10px;">
-            <a class="btn btn-info btn" name="submitResults" disabled="true" style="text-transform: initial;" href="http://www.bit.ly/runnussubmission">Submit</a>
+          <li class="nav-item results-button">
+            <a class="btn btn-info btn" name="submitResults" disabled="true" target="_blank" style="text-transform: initial;" href="http://www.bit.ly/runnussubmission">Submit</a>
           </li>
           <li class="nav-item" style="margin:auto;">
-            <a id="register" name="register" class="btn btn-primary btn-l text-uppercase js-scroll-trigger infinite" disabled="true" href="http://www.bit.ly/runnus2020">Sign Up</a>
+            <a id="register" name="register" target="_blank" class="btn btn-primary btn-l text-uppercase js-scroll-trigger infinite" disabled="true" href="http://www.bit.ly/runnus2020">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -131,8 +132,8 @@
           </div>
           <div class="col-lg-2 col-sm-0"></div>
         </div>
-        <a class="btn btn-info btn-xl text-uppercase register-button" name="submitResults" disabled="true" href="http://www.bit.ly/runnussubmission" style="margin-right:5px;" >Submit Results</a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger register-button animated pulse" name="register" disabled="true" href="http://www.bit.ly/runnus2020">Sign Up Now!</a>
+        <a class="btn btn-info btn-xl text-uppercase register-button" target="_blank" name="submitResults" disabled="true" href="http://www.bit.ly/runnussubmission" style="margin-right:5px;" >Submit Results</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger register-button animated pulse" target="_blank" name="register" disabled="true" href="http://www.bit.ly/runnus2020">Sign Up Now!</a>
       </div>
     </div>
   </header>
@@ -282,7 +283,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-sm-10 text-center mt-5">
           <h3 class="section-heading">Race Fees</h3>
-          <img class="img-fluid mt-3" src="img/raceInfo/RaceFeesNew.png" alt="Race Fees">
+          <img class="img-fluid mt-3" src="img/raceInfo/RaceFeesNewUpdated.png" alt="Race Fees">
         </div>
       </div>
       <div class="row justify-content-center">
@@ -312,7 +313,7 @@
             <h6 class="card-subtitle mb-1 text-muted mt-3">End Date: 27th Sep 2020</h6>
             <p class="card-text">Sign Up as a group to get a total of $4 off race fees</p>
             <div class="text-center">
-              <a class="btn btn-primary text-uppercase" name="register" disabled="true" href="#">Sign Up Now!</a>
+              <a class="btn btn-primary text-uppercase" name="register" disabled="true" target="_blank" href="http://www.bit.ly/runnus2020">Sign Up Now!</a>
             </div>
           </div>
         </div>
@@ -323,13 +324,72 @@
             <p class="card-text">Enter Promo Code: alumNUS for NUS Alumni's only</p>
             <p class="text-danger" style="font-size: 0.75rem;">Any non-Alumni found to be using the code will have their sign up invalidated with <strong>no refunds.</strong></p>
             <div class="text-center">
-              <a class="btn btn-primary text-uppercase" name="register" disabled="true" href="#">Sign Up Now!</a>
+              <a class="btn btn-primary text-uppercase" name="register" disabled="true" target="_blank" href="http://www.bit.ly/runnus2020">Sign Up Now!</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+    <!-- Tips -->
+    <section class="page-section" id="tips">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10 text-center">
+            <h2 class="section-heading">Tips</h2>
+            <h3 class="section-subheading text-muted">Need Any Help?</h3>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="card-deck row justify-content-center mr-1 ml-1">
+          <div class="card col-md-4">
+            <div class="card-body">
+              <h5 class="card-title text-center">Sign Up Guide</h5>
+              <p class="card-text">If you have problems signing up or are going to sign up check out a step by step walkthrough</p>
+              <div class="text-center">
+                <a class="btn btn-primary text-uppercase" href="#" target="_blank">Sign Up Guide</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-md-4">
+            <div class="card-body">
+              <h5 class="card-title text-center">MapMyRun Set-up Guide</h5>
+              <p class="card-text">Find out how to set up our official Running App before your Run</p>
+              <div class="text-center">
+                <a class="btn btn-primary text-uppercase" href="#">Set Up Guide</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-md-4">
+            <div class="card-body">
+              <h5 class="card-title text-center">Submission Guide</h5>
+              <p class="card-text">Find out how to submit your results</p>
+              <div class="text-center">
+                <a class="btn btn-primary text-uppercase" href="#">Set Up Guide</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 col-sm-10 text-center mt-5">
+            <h3 class="section-heading">Suggested Running Routes</h3>
+            <div class="row mt-3">
+              <div class="col-md-4 mb-2">
+                <div id="3km" class="btn-lg btn-primary">3km</div>
+              </div>
+              <div class="col-md-4 mb-2">
+                <div id="5km" class="btn-lg btn-primary">5km</div>
+              </div>
+              <div class="col-md-4 mb-2">
+                <div id="10km" class="btn-lg btn-primary">10km</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- Team -->
   <!-- <section class="page-section" id="team">
@@ -412,15 +472,13 @@
           </div>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">
+      <div class="row mt-3 justify-content-center">
+        <div class="col-md-4">
           <h4 class="service-heading text-center">A Project of</h4>
-          <div class="row justify-content-center">
+          <div>
             <a href="https://www.nussportsclub.org" target="_blank"><img class='img-fluid' src="img/logos/Sports_Club_Logo.png" alt="NUS Students' Sports Club"></img></a>
           </div>
         </div>
-        <div class="col-lg-4"></div>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -721,17 +779,6 @@
   
   <!-- Custom scripts for this template -->
   <script src="js/agency_V8.js"></script>
-  <script src="js/googleMapHover.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140884872-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-140884872-1');
-  </script>
 
 </body>
 

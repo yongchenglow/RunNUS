@@ -862,3 +862,17 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     padding-bottom: 25px;
   }
 }
+
+.results-button {
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .results-button {
+    margin-right:10px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
